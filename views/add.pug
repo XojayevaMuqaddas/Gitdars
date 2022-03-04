@@ -1,0 +1,25 @@
+include header 
+body 
+include navbar
+h2.text-center.my-3=update
+if (datas)
+  form(method="POST")
+    .mb-3.m-auto.mx-5.py-2
+      label(for='exampleInputEmail1') Mahsulot rasmi
+      input#exampleInputComment.form-control(type='file' name='img' value=datas.img)
+    .mb-3.mx-5
+      label(for='exampleInputPassword1') nomi
+      input#exampleInputname.form-control(type='text' name='name' value=datas.name)
+    .mb-3.mx-5
+      label(for='exampleInputPassword1') Ishlab chiqaruvch
+      input#exampleInputmanufacture.form-control(type='text' name='manufacturer' value=datas.manufacturer )
+    .mb-3.mx-5
+      label(for='exampleCheck1') Narxi
+      input#exampleprice.form-control(type='number' name='price' value=datas.price)
+    .mb-3.mx-5
+      label(for='views') Ko'rishlar soni
+      input#exampleviews.form-control(type='number' name='views' value=datas.views)
+    .mb-3.mx-5
+      label(for='exampleCheck1') Tavsifi
+      input#examplecomments.form-control(type='text' name='comment'  value=datas.comment)
+      button.btn.btn-primary.my-5(type='submit') Yuborish
